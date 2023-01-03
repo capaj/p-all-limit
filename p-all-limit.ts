@@ -9,7 +9,7 @@ export const promiseAllLimit = <T>(
     let results = [] as T[]
     let itemIndex = -1
     const next = () => {
-      itemIndex++
+
 
       if (array.length === 0 && inFlight === 0) {
         return resolve(results)
@@ -18,10 +18,11 @@ export const promiseAllLimit = <T>(
       while (inFlight < limit && array.length > 0) {
         inFlight++
         const nextItem = array.shift() as T
-
+        itemIndex += 1
+        const currentIndexForThisClosure = itemIndex
         iterator(nextItem)
           .then((singleResult) => {
-            results[itemIndex] = singleResult
+            results[currentIndexForThisClosure] = singleResult
             inFlight--
             next()
           })
