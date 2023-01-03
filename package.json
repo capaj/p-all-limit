@@ -1,6 +1,6 @@
 {
   "name": "p-all-limit",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "",
   "main": "./dist/p-all-limit.js",
   "module": "./dist/p-all-limit.mjs",
