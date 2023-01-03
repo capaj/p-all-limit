@@ -42,7 +42,7 @@ describe('promiseAllLimit', () => {
       }
     }
 
-    const res = await promiseAllLimit(
+    const res = await promiseAllLimit<number>(
       [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       async (n) => {
         return new Promise((resolve) => {

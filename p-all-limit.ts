@@ -1,6 +1,6 @@
 export const promiseAllLimit = <T>(
-  array: T[],
-  iterator: (item: T) => Promise<T>,
+  array: any[],
+  iterator: (item: any) => Promise<T>,
   limit: number
 ): Promise<T[]> => {
   let inFlight = 0

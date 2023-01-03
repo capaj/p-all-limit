@@ -1,6 +1,6 @@
 {
   "name": "p-all-limit",
-  "version": "1.0.0",
+  "version": "0.9.1",
   "description": "",
   "main": "./dist/p-all-limit.js",
   "module": "./dist/p-all-limit.mjs",
@@ -18,6 +18,9 @@
     "build": "tsup p-all-limit.ts --format cjs,esm --dts --sourcemap",
     "prepublishOnly": "npm run build"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "p-all-limit",
     "promise",
