@@ -1,0 +1,31 @@
+{
+  "name": "p-all-limit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "ts": "tsc"
+  },
+  "keywords": [
+    "p-all-limit",
+    "promise",
+    "all",
+    "limit",
+    "batching",
+    "concurrency",
+    "parallel",
+    "async",
+    "await",
+    "typescript",
+    "javascript",
+    "nodejs",
+    "node"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "vitest": "^0.26.3"
+  }
+}
