@@ -2,10 +2,21 @@
   "name": "p-all-limit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/p-all-limit.js",
+  "module": "./dist/p-all-limit.mjs",
+  "types": "./dist/p-all-limit.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/p-all-limit.js",
+      "import": "./dist/p-all-limit.mjs",
+      "types": "./dist/p-all-limit.d.ts"
+    }
+  },
   "scripts": {
     "test": "vitest",
-    "ts": "tsc"
+    "ts": "tsc --noEmit",
+    "build": "tsup p-all-limit.ts --format cjs,esm --dts --sourcemap",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "p-all-limit",
@@ -25,6 +36,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "tsup": "^6.5.0",
     "typescript": "^4.9.4",
     "vitest": "^0.26.3"
   }
